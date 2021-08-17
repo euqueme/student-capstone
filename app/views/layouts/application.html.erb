@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= favicon_link_tag 'idea1.png' %>
+    <title>Get Cultured</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <%= render 'layouts/header', locals: {categories:@categories} %>
+    <%= render "shared/flash_notice" %>
+    <%= yield %>
+    <%= render 'layouts/footer' %>
+  </body>
+</html>
